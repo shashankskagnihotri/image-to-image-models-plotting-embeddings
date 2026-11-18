@@ -1,0 +1,41 @@
+PRIMARY IMPLEMENTATION SOURCES
+==============================
+
+Hugging Face Diffusers: SD3/SD3.5 img2img implementation (inspect its
+prepare_latents, get_timesteps, callback_on_step_end and scheduler.step):
+https://github.com/huggingface/diffusers/blob/main/src/diffusers/pipelines/stable_diffusion_3/pipeline_stable_diffusion_3_img2img.py
+
+Hugging Face Diffusers: InstructPix2Pix implementation (inspect its
+prepare_image_latents, prepare_latents, three-way image/text CFG,
+callback_on_step_end and scheduler.step):
+https://github.com/huggingface/diffusers/blob/main/src/diffusers/pipelines/stable_diffusion/pipeline_stable_diffusion_instruct_pix2pix.py
+
+Hugging Face: How step-end callbacks work (latents are POST-update):
+https://huggingface.co/docs/diffusers/main/using-diffusers/callback
+
+Hugging Face: InstructPix2Pix model, sample photo, and official example:
+https://huggingface.co/docs/diffusers/main/api/pipelines/pix2pix
+https://huggingface.co/datasets/diffusers/diffusers-images-docs/resolve/main/mountain.png
+
+Hugging Face: SD3/SD3.5 pipelines and memory guidance:
+https://huggingface.co/docs/diffusers/api/pipelines/stable_diffusion/stable_diffusion_3
+https://huggingface.co/stabilityai/stable-diffusion-3.5-medium
+
+RELEVANT RESEARCH (MOTIVATION, NOT A CLAIM OF IDENTICAL PCA PROTOCOL)
+====================================================================
+
+FlowEdit: Inversion-Free Text-Based Editing Using Pre-Trained Flow Models
+https://arxiv.org/abs/2412.08629
+https://github.com/fallenshock/FlowEdit
+
+Latent Space Editing in Transformer-Based Flow Matching
+https://arxiv.org/abs/2312.10825
+
+FlowAlign: Trajectory-Regularized, Inversion-Free Flow-based Image Editing
+https://arxiv.org/abs/2505.23145
+
+These works motivate studying latent flow/editing trajectories. The PCA
+analysis here is a self-contained observational protocol: it deliberately
+does NOT replace the inference pipeline with FlowEdit's edited ODE, add
+steering vectors, fit PCA across all states, or treat SD3.5 and IP2P as the
+same class of generative model.

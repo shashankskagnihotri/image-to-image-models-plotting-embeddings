@@ -1,0 +1,6 @@
+Original internet image: https://huggingface.co/datasets/diffusers/diffusers-images-docs/resolve/main/mountain.png
+Preparation: EXIF transpose, center crop, resize to 512 x 512.
+Variant: independent Poisson photon counts per linear-light RGB channel.
+Peak photons per channel: 35
+Random seed: 2026
+The noise is illustrative and is not a validated editing protection.

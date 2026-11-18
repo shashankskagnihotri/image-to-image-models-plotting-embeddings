@@ -1,0 +1,49 @@
+{
+  "model_type": "sd35",
+  "model_path": "/ceph/sagnihot/cache/huggingface/hub/models--stabilityai--stable-diffusion-3.5-large/snapshots/ceddf0a7fdf2064ea28e2213e3b84e4afa170a0f",
+  "image_1": "sample_images/original.png",
+  "image_2": "sample_images/shot_noise.png",
+  "prompt": "make the mountains into a desert and add a properller aircraft flying right to left in the sky leaving a cloud trail",
+  "num_inference_steps_requested": 28,
+  "num_actual_denoising_updates": 17,
+  "strength_sd35_only": 0.6,
+  "guidance_scale": 3.5,
+  "settings_source": "SD3.5 Large model card: 28 steps, guidance_scale 3.5. SD3 img2img pipeline default strength 0.6.",
+  "image_guidance_scale_ip2p_only": null,
+  "seed_shared_between_runs": 1234,
+  "compute_dtype": "float16",
+  "model_cpu_offload": true,
+  "pca_protocol": "One PCA is fitted on image 1 step-0 spatial latent vectors and reused for every denoising state and for image 2.",
+  "full_latent_tensor_shape_per_image": [
+    18,
+    16,
+    64,
+    64
+  ],
+  "conditioning_image_latent_shape_per_image": [
+    16,
+    64,
+    64
+  ],
+  "timesteps_used_for_updates": [
+    814.3247680664062,
+    790.3682861328125,
+    764.6771240234375,
+    737.0558471679688,
+    707.2785034179688,
+    675.0823364257812,
+    640.1602172851562,
+    602.1505737304688,
+    560.625,
+    515.0720825195312,
+    464.87603759765625,
+    409.288818359375,
+    347.39263916015625,
+    278.0487976074219,
+    199.8269805908203,
+    110.90573120117188,
+    8.928571701049805
+  ],
+  "step_zero_definition": "after image/noise preparation, before first denoiser call",
+  "sampling_note": "SD3.5 uses the VAE posterior MODE (deterministic), then official image-to-image flow scheduler noise mixing with the same seeded noise."
+}
